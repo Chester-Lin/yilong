@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>模板.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+/* 公共代码 */
+  *{padding: 0; margin: 0; border: 0;}
+  body{font-size:12px;font-family:arial,Verdana, Geneva, Helvetica;color:#555;
+       line-height:20px;-webkit-text-size-adjust:none;
+   }
+   a { text-decoration: none; color: #37e; }
+   a:HOVER { text-decoration: none; color: #f55; }
+   
+   
+/*---------- 头部开始部分----------- */   
+  #header .header_top{padding-top: 12px;min-width: 1000px;width: 1200px; height: 63px;} 
+ /* logo代码 */ 
+  #header .logo{ display:inline-block;width: 130px;height: 48px;
+			     float: left;margin-top: 2px;cursor: pointer;
+			     background: url(img/icon201706.png) -658px 0px no-repeat;			     
+   }  
+  /* logo右边的菜单代码 */  
+   .header_top .logoRight { float: right;width: 860px;height:42px;margin-top: 5px;}
+   .top_menu { width:  350px;height: 21px;float: left;  }
+   .top_menu span  { padding: 0 5px;height:20px; margin: 0 5px; display:inline-block; }
+   .top_menu a         { color: #999; }
+   .top_menu a:HOVER   { color: #f55; }
+   .top_menu b         {color:#c5c5c5; height:20px;}    
+   .top_menu span p {  position: absolute;width: 70px;height: 60px;
+                        border: 1px solid #c3c3c3;
+                        border-top: none;left: -1px;top: 20px;background: #fff;
+                        z-index: 1000; display: none;
+      }
+   /* English那个的所有样式 */
+   .top_menu  span p a { width:50px;float: left;border-top: 1px #cacaca dashed; margin: 0px 10px 0px 5px ;padding: 5px 0 3px 5px;}
+   .top_menu .language  { position: relative;border: 1px solid #fff;width: 60px;margin-top: -1px;}
+   .top_menu .language1 { border: 1px solid #cacaca;border-bottom: none; }            
+   .com_icon04{padding-top: 2px;position: relative;top:2px;left:1px;}
+   
+  /* logo最右边三个图片及文字 */
+   .minprogram { display:inline-block;width: 150px;height:42px;margin-left: 10px;cursor: pointer;position: relative;float: left; }
+   .com_icon  { float: left;width: 42px;height: 42px;display: inline-block;}
+   .com_icon1 { background: url(img/icon201706.png) -378px -769px;
+                width: 9px; height: 20px;float: right;position: relative;top:5px;
+     }
+   .min { background: url(img/icon201706.png) -127px -763px;  }
+   .phone1 { background: url(img/com_icon01.gif) no-repeat;  }
+   .phone2 { background: url(img/icon201706.png) -42px -762px; } 
+   
+   .minprogram em { float: left;color: #ff6a6a;font: 14px/18px Microsoft yahei;padding: 0 0 0 10px; }
+   .minprogram p  { width: 126px;height:20px;font: 16px Microsoft yahei;float: left; color: #2064c8;padding-left: 10px;}
+   .green  em {    color: #09bb07; }
+   .w180  { width:180px; }
+   .w180 em  { color:  #999; }
+   
+   .only_xcx .com_arrow_xcx {background: url(img/icon201706.png) -211px -2px;height: 9px;width: 18px;  }
+   .only_xcx  { box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);width: 210px;height: 92px;
+                position: absolute;top: 54px;left: 0px;padding: 10px; 
+                background: url(img/icon201706.png) no-repeat  #fff;}
+   .two  { background-position:-460px -48px  ;}
+   .none { display: none; }
+/*------------导航栏部分----------------- */     
+    .all_daohang  { background: #2064c8;height: 39px; }
+  /* 导航栏左边 */ 
+    .daohangall { width: 1200px;height: 39px; min-width: 1000px;position: relative;}
+    .daohangall ul li { list-style: none; height: 39px; font-size: 14px;border-right: 1px solid #3774ce; float: left;position: relative; padding: 0 12px;}
+    .daohangall ul li:HOVER { background-color: #0053ac; }
+    .daohangall ul li a {line-height:40px;color: #fff;font-size: 14px;text-decoration: none;  }
+    .daohangall ul li a:HOVER { }
+    .daohangall ul li a span.icon_min { background: url(img/icon201706.png) no-repeat;width: 21px;height: 20px;position: absolute;top:-10px;left:50px;display: inline-block; }
+    .daohangall ul li a span.icon_max { background: url(img/icon201706.png) no-repeat;width: 41px;height: 20px;position: absolute;top:-10px;left:50px;display: inline-block; }
+ /* 导航栏右边 */  
+    .daohangaR  {height: 39px; width: 120px;float: right;font-size: 14px;color: #fff;background: #003679; }
+    .daohangaR span { padding:0 3px; }
+    .daohangaR  a { color: #fff;line-height: 40px; font-weight: bold;}
+    
+    .dis_div {display: none; position: absolute;width: 208px;top: 39px;right: 0px;box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);border: 1px solid #c5c5c5;padding-top: 15px;  }
+ /* 登录按钮 */    
+    .new_btnLogin a {background: #f80; display: block;width: 180px; height: 34px;
+                     line-height: 34px;text-align: center;font: 18px/34px Microsoft YaHei;
+                     color: #fff; text-decoration: none; border-radius: 3px;
+    }
+    .new_btnLogin a:HOVER {background-color: #f60;}
+ /* 登录按钮下方图标 */      
+    .minphoto  { width: 180px;height:200px; }
+    .everymin  { width: 60px;height:63px;float: left;cursor: pointer; }
+    .everymin div {width: 45px; height:45px;background: url(img/icon201706.png) no-repeat;}
+    .everymin span { height:18px;color: #999; }
+    .everymin .a1 { background-position: -153px -675px; }
+    .everymin:hover .a1 { background-position: 5px -675px; }
+    .everymin .a2 { background-position: -220px -675px;  }
+    .everymin:hover .a2 { background-position: -50px -675px; }    
+    .everymin .a3 { background-position: -157px  -618px;  }
+    .everymin:hover .a3 { background-position: 5px -618px; }   
+    .everymin .a4 { background-position: -220px -613px;  }
+    .everymin:hover .a4 { background-position: -52px -613px; }   
+    .everymin .a5 { background-position: -282px -618px;  }
+    .everymin:hover .a5 { background-position: -104px -618px; }    
+    .everymin .a6 { background-position: -155px -560px ;  }
+    .everymin:hover .a6 { background-position: 5px -560px; }   
+    .everymin .a7 { background-position: -282px -560px;  }
+    .everymin:hover .a7 { background-position: -102px -560px; }
+    .everymin .a8 { background-position: -282px -670px;  }
+    .everymin:hover .a8 { background-position: -102px -670px; }
+/*---------- 头部结束部分----------- */   
+
+/*---------- 脚部开始----------- */
+    .foot{width: 100%;padding: 20px 0;border-top: 1px solid #EEE; min-width: 1000px; margin-top: 20px;}
+   /*  脚部第一行文字和图片 */ 
+    .foot_info { width: 1000px;background-color: red;}  
+    .foot_info dl {float: left;width: 18%;padding-left: 2%;text-align: left;}
+    .foot_info dl dt {border-left: 3px solid #5D96C7;padding: 0 0 0 10px;height: 18px;
+                      font: 18px/1 Microsoft Yahei;margin-bottom: 10px;
+      }
+    .foot_info dl dd { padding-left: 14px; line-height: 24px; }
+    .foot_info dl dd a { color: #333;text-decoration: none; transition: margin 0.5s;}
+    .foot_info dl dd a:HOVER {margin-left: 10px; color: #F55;}
+    .foot_info .iconinfo   {  padding-top: 10px;height: 100px;} 
+    .iconinfo i{ background:url(img/icon201706.png) no-repeat;height: 100px;width: 100px;display: inline-block; }
+    .foot_info_app {background-position: -259px -56px !important;}
+    .foot_info_wx  {background-position: -362px -58px !important;}
+    .foot_info_xcx {background-position: -155px -56px !important;}   
+   /*  脚部第二行文字 */ 
+   .foot_text { clear:left;position: relative;text-align: center;padding: 20px 0; }
+   .foot_text  a { color: #333; text-decoration: none; }
+   /*  脚部第三行图片 */
+   .foot_photo  { text-align: center; }
+   .foot_photo a {display: inline-block;height: 37px;line-height: 26px;
+                  text-align: center;margin: 0 5px;color: #666;text-decoration: none; 
+                  background:url(img/icon201706.png) no-repeat;
+                  text-indent: -9999em;position: relative;top: 0;
+                 -webkit-transition: top 0.5s; transition: top 0.5s;
+     }
+   .foot_photo a:HOVER{ top:-5px; }
+    .w80 { width: 80px; }
+    .w60 { width: 60px; }
+    .w92 { width: 92px; }
+    .w83 { width: 83px; } 
+    .foot_photo a.pt_1 { background-position: -329px -436px; }
+    .foot_photo a.pt_2 { background-position: -331px -482px; }
+    .foot_photo a.pt_3 { background-position: -473px -436px; }
+    .foot_photo a.pt_4 { background-position: -565px -436px; }
+    .foot_photo a.pt_5 { background-position: -657px -436px; }
+    .foot_photo a.pt_6 { background-position: -393px -477px; }
+    
+  
+</style>
+<script type="text/javascript" src='jquery-1.6.4.min.js'></script>
+<script type="text/javascript">
+    
+    $(function(){
+      //  语言切换按钮
+	    $(".language").hover(function(){
+	          $(".language p").show();
+	          $(this).addClass("language1");         
+	    },function(){
+	          $(".language p").hide();
+	          $(this).removeClass("language1");   
+	    });
+	  //  图片切换按钮  
+	    $(".minprogram").hover(function(){
+	          $(this).children("div").toggle();
+        
+	    });
+	  //  打开登录页面   
+	    $(".everymin").click(function(){
+	       location.href = "login.html";
+	    });
+	  //  更改导航栏隐藏显示部分  
+	    $(".daohangaR,.dis_div").hover(function(){
+	         $(".dis_div").toggle();
+	    });
+	    
+    });
+ 
+</script>
+
+  </head>
+  
+  <body>
+    <div id="header" class="header" align="center">
+<!---------------------------------顶部开始--------------------------->     
+        <div class="header_top" align="left">
+  <!--------导航栏 和注册登录-------- -->             
+            <div class="logo">
+            <a href="http://www.elong.com" title="艺龙旅行网"></a>
+            </div>
+   <!---logo右边--->          
+            <div class="logoRight">
+                <div class="top_menu">
+	                 <span>
+	                    <a href="http://imall.elong.com/">积分商城</a>
+	                 </span>
+	                 <b>|</b>
+	                 <span>
+	                    <a href="http://imall.elong.com/">礼品卡</a>
+	                 </span>
+	                 <b>|</b>
+	                 <span>
+	                    <a href="http://imall.elong.com/">在线客服</a>
+	                 </span>
+	                 <b>|</b>
+	                 <span class="language">
+		                 <a href="http://imall.elong.com/">English</a>
+		                 <i class="com_icon04"><img src="img/com_icon04.jpg"/></i>
+		                 <p>
+			                 <a href="http://hotel.elong.com/trans2cn/?target=http://hotel.elong.com" title="简体版" rel="nofollow">简体版</a> 
+			                 <a href="http://hotel.elong.com/trans2tw/?target=http://hotel.elong.com" rel="nofollow" title="繁體版">繁体版</a>
+			             </p>   
+		             </span> 	                 
+                </div>  
+     <!---logo最右边三个图标--->                                            
+	            <div class="minprogram green" > 
+			        <i class="com_icon min"></i> 
+			        <em>小程序</em>  
+			        <em>体验更轻盈</em>
+			        <div class="none">  
+			             <img src="img/111.jpg"/>  
+			        </div>		            	             
+               </div>
+               <a href="http://promotion.elong.com/index/cn/2016/elong_app_down/index.html" target="_blank">
+	               <div class="minprogram"> 		               
+					        <i class="com_icon phone1"></i> 
+					        <em>手机版</em>  
+					        <em>专享五折起</em>
+					        <div class="only_xcx two none">  
+					                <i class="com_arrow_xcx"></i>  
+					        </div>				   	            	             
+	               </div> 
+               </a>	
+               <div class="minprogram w180" > 
+			        <i class="com_icon phone2"></i> 
+			        <em>7×24 客服电话</em>  
+			        <p>
+			           <i class="com_icon1"></i>
+			           4009-333-333
+			        </p>
+			        <div class="none">  
+			               <img src="img/333333.jpg"/>   
+			        </div>		            	             
+               </div>                       
+            </div>                                     
+        </div>
+<!--------导航栏 和注册登录----------> 
+        <div class="all_daohang">
+         <div class="daohangall">
+           <ul>
+             <li>
+               <a href="http://www.elong.com" title="艺龙旅行网">首页</a>
+             </li>
+             <li>
+               <a title="酒店预订" href="http://hotel.elong.com/">国内酒店</a>
+             </li>
+             <li>
+	              <a href="http://ihotel.elong.com/" title="国际酒店">国际酒店
+	              <span class="icon_min" style="background-position: -510px 0;"></span>
+	              </a>
+             </li>
+             <li>
+	              <a href="http://jia.elong.com/" title="短租公寓">短租公寓</a>
+             </li>
+             <li>
+                  <a href="http://flight.elong.com/" title="机票">机票
+	              <span class="icon_max" style="background-position: -588px 0;"></span>
+	              </a>
+             </li>
+             <li>
+                  <a href="http://train.elong.com/" title="火车票">火车票</a>             
+             </li>
+             <li>
+                  <a href="http://bus.elong.com/" title="汽车票">汽车票
+	              <span class="icon_max" style=" background-position: -370px 0;"></span>
+	              </a>
+             
+             </li>
+             <li>
+                  <a href="http://bus.elong.com/" title="旅游指南">旅游指南
+	              </a>                        
+             </li>           
+           </ul>
+           <div class="daohangaR" id="user_display_login"> 
+           <span><a href="login.html">登录</a></span>|
+           <span><a href="register.html">注册</a></span> 
+           </div>
+           
+           <div class="dis_div"> 
+                <div class="new_btnLogin"> <a href="login.html">登录</a></div> 
+                <div class="minphoto" >
+	                  <div class="everymin">
+	                     <div class="a1"></div>
+	                     <span>酒店订单</span>
+	                  </div>
+	                  <div class="everymin">
+	                     <div class="a2"></div>
+	                     <span>机票订单</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a3"></div>
+	                     <span>火车票订单</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a4"></div>
+	                     <span>现金账户</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a5"></div>
+	                     <span>汽车票订单</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a6"></div>
+	                     <span>酒店收藏</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a7"></div>
+	                     <span>我的点评</span>
+	                  </div>	                  
+	                  <div class="everymin">
+	                     <div class="a8"></div>
+	                     <span>个人设置</span>
+	                  </div>               
+                </div>
+           </div>
+         </div>
+        </div>
+   
+<!-----------------------------头部内容结束------------------------------> 
+
+    </div>
+<!-----------------------------脚部部分开始------------------------------>
+    <div class="foot" align="center">
+            <div class="foot_info">
+	            <dl>
+					<dt>
+						加盟合作
+					</dt>
+					<dd>
+						<a href="http://hotel.elong.com/union/join.html#?" title="酒店加盟">酒店加盟</a>
+					</dd>
+					<dd>
+						<a href="http://open.elong.com/" title="机票酒店分销联盟" rel="nofollow">开放平台</a>
+					</dd>
+					<dd>
+						<a
+							href="http://promotion.elong.com/hotel/cn/elongagent/elongagent.html" title="旅游产品代理合作">代理合作</a>
+					</dd>
+					<dd>
+						<a href="http://promotion.elong.com/web/adservice/adservice.html" title="在线广告服务">广告服务</a>
+					</dd>
+					<dd>
+						<a href="http://ebooking.elong.com/ebkauth/login" title="艺龙商家中心">商家中心</a>
+					</dd>
+				</dl>
+				<dl>
+				    <dt>关于艺龙</dt>
+					<dd>
+						<a href="http://hotel.elong.com/directory/" title="酒店大全">酒店大全</a>
+					</dd>
+					<dd>
+						<a href="http://ihotel.elong.com/sitemap/" title="国际酒店">国际酒店</a>
+					</dd>
+					<dd>
+						<a href="http://promotion.elong.com/index/cn/campus/index.html" title="校园招聘">校园招聘</a>
+					</dd>
+					<dd>
+						<a href="http://promotion.elong.com/web/contact/contact.html" title="联系艺龙旅行网">联系我们</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>艺龙APP下载</dt>
+					<dd class="iconinfo">
+						<i class="foot_info_app"></i>
+					</dd>
+				</dl>
+				<dl>
+					<dt>艺龙官方微信</dt>
+					<dd class="iconinfo">
+						<i class="foot_info_wx"></i>
+					</dd>
+				</dl>
+				<dl>
+					<dt>艺龙官方小程序</dt>
+					<dd class="iconinfo">
+						<i class="foot_info_xcx"></i>
+					</dd>
+				</dl>
+
+			</div>
+            <div class="foot_text">
+	             © 1999 - 2017 艺龙网信息技术（北京）有限公司, eLong, Inc or its affiliates. All Rights Reserved. 
+	            <a href="#">京ICP证010011号</a>
+	                                   京公网安备
+	            <a href="#">11010502026059号</a>
+            </div>
+            <div class="foot_photo">
+             <a class="w80 pt_1" href="https://seal.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=SECURE.ELONG.COM&amp;lang=zh_cn" target="_blank" alt="SSL加密认证" title="SSL加密认证">SSL加密认证</a>
+             <a class="w60 pt_2" href="http://www.atsec.cn/cn/pci-attestation/Elong-PCIAttestation-atsec-PCI-DSS-C-01128.jpg" target="_blank" title="艺龙网通过PCI认证" alt="艺龙网通过PCI认证">艺龙网通过PCI认证</a>
+             <a class="w92 pt_3" href="http://www.itrust.org.cn/yz/pjwx.asp?wm=1802034050" target="_blank" alt="信赖商业计划" title="信赖商业计划">信用评级</a>
+             <a class="w92 pt_4" href="https://ss.knet.cn/verifyseal.dll?sn=e14021111010646180fggu000000&amp;ct=df&amp;a=1&amp;pa=500267"_target="_blank" title="可信用网站身份验证" alt="可信用网站身份验证">可信用网站身份验证</a>
+             <a class="w92 pt_5" href="http://search.szfw.org/cert/l/CX20120918001652001722" target="_blank" title="诚信示范企业" alt="诚信示范企业">诚信示范企业</a>
+             <a class="w83 pt_6" href="http://si.trustutn.org/info?sn=912170105026585086807&amp;certType=1" target="_blank"alt="品牌官网认证" title="品牌官网认证">品牌官网认证</a>
+            </div>
+   </div>
+<!-----------------------------脚部部分结束------------------------------>
+
+  </body>
+</html>
+
+                 
+                 
+                 
+                  
+                      

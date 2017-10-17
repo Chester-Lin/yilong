@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>轮播图和选项卡.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+/* 公共代码 */
+   *{padding: 0; margin: 0; border: 0;}
+   body{font-size:12px;font-family:arial,Verdana, Geneva, Helvetica;color:#555;
+       line-height:20px;-webkit-text-size-adjust:none;
+   }
+   a { text-decoration: none; color: #37e; }
+   a:HOVER { text-decoration: none; color: #f55; }
+   .mt20  {margin-top: 20px;}
+   .mt10  {margin-top: 10px;}
+   
+/*---------轮播图开始-------------*/
+   .thisis_tab { height:380px;width: 100%;position: relative; } 
+   .lunbotu {overflow: hidden; width: 100%; height: 380px; }
+   .lunbotu ul li { list-style: none;float: left;width:100%;height:380px;cursor: pointer;display: none;}
+   .lunbotu ul li i{ display: inline-block;width:100%;height:380px;background: no-repeat center bottom; }
+   .dots { position: absolute;top: 360px; right: 50%;height: 30px;width: 250px;
+           height: 30px;margin-right: -603px;text-align: right;
+        }
+   .dots .dot {width: 24px;height: 4px;padding: 5px 3px;overflow: hidden; zoom: 1;
+              line-height: 9999px;display: inline-block;cursor: pointer; 
+              background: url(img/icon_index.png) no-repeat -508px -368px;
+      }
+   .active { background-position: -508px -387px !important; }
+   
+   
+@-webkit-keyframes ittem{
+0%      {-webkit-transform: rotate(15deg);}
+10%, 30%{-webkit-transform: rotate(20deg);}
+20%, 40%{-webkit-transform: rotate(-20deg);}
+50%, 70%{-webkit-transform: rotate(25deg);}
+60%, 80%{-webkit-transform: rotate(-25deg);}
+90%     {-webkit-transform: rotate(15deg);}
+100%    {-webkit-transform: rotate(0);}
+}
+/*---------轮播图结束-------------*/
+
+/*---------选项卡开始-------------*/
+   /* 选项卡左边 */
+   .xuanxiangka   { width:100%; height:300px;position: absolute; top:0px;}
+   .xuanxuangka_l { width:300px;margin-top: 40px;width: 1200px;  }
+   .thisis_info   { width: 600px;height:300px;box-shadow: 2px 2px 2px rgba(0,0,0,.2) }
+   .thisis_info .it_ul { width: 100px;heiht:300px; background-color:  #f3f3f3;
+                         display: inline-block; position: relative;
+    }
+   .thisis_info .it_ul li { list-style: none;width: 63px;height:59px;padding: 0 18px;
+                            font-size:14px;cursor:pointer;border-right: 1px solid #e1e1e1;
+                            border-bottom: 1px solid #ddd;line-height: -30px; 
+          }
+   .thisis_info .it_ul li.emty {list-style: none;width: 63px;height:60px;padding: 0 18px;border-top: 1px solid #f3f3f3; border-bottom-width: 0;margin-top: -1px; }
+   .ei_icon { display: inline-block; background: url(img/icon_index.png) no-repeat; width: 16px;height:18px;margin:22px 0px 0 0; }
+   .icon01  { background-position:-584px -345px;  }
+   .icon02  { background-position:-582px -367px;  }
+   .icon03  { background-position:-584px -386px;  }
+   .icon04  { background-position:-581px -316px;  }
+   .xuanxiang .icon11  { background-position:-557px -345px;  }
+   .xuanxiang .icon12  { background-position:-555px -367px;  }
+   .xuanxiang .icon13  { background-position:-557px -386px;  }
+   .xuanxiang .icon14  { background-position:-554px -316px;  }
+   .thisis_info .it_ul li a { position: relative;top:-5px;color: #555; }
+   .thisis_info .it_ul .xuanxiang a { color: #36d;position: relative;top:-5px; }
+   .xuanxiang  {  background-color: #fff;border-right-color: #fff !important;color: #36d;	}
+  
+   /* 选项卡右边 */
+   .cate { width: 500px;height:300px;background-color: #fff;float: right; }
+   .choose_self {display: none;}
+   
+/* 酒店 */
+      .hotel_span{ width: 440px;height:50px;border-bottom: 2px #ddd solid;}
+      .hotel_span span{ display: inline-block;color:#666;font-size:13px;
+                        font-weight:bold;cursor: pointer; padding: 17px 15px 13px 13px;
+        }
+      .neiwai{ border-bottom:2px #3377DD solid;color: #36d !important; }    
+      .hotel_span span:HOVER{color:#3377DD;}       
+      .country_hotel{padding: 20px 30px 0px 30px; font-size: 14px;color: #555;} 
+      .main_input_text{  width: 420px;height:30px;font-size: 12px;border-radius:4px;
+                         color:#666;margin-bottom: 20px;
+        }
+      .main_input_text input{border:1px #bbb solid;border-radius:4px;text-indent:6px;
+                             outline:0; width: 370px; height:28px;
+        } 
+          
+      .main_input_text_2{height:30px;font-size: 12px;color:#666;border-radius:4px;margin-bottom: 20px;} 
+      .main_input_text_2 input{width: 166px;height:28px; text-indent:6px;outline:0;
+                              border:1px #bbb solid;border-radius:4px;
+        }
+       /* 搜索按钮 */ 
+      .search{   width: 159px;background-color: #f55;color: #fff;height: 32px;
+                 line-height: 32px;  border-radius: 3px; font-size: 16px;
+                 text-align: center;  cursor: pointer;
+                 background-image: url("img/search.png");
+                 background-repeat: no-repeat;
+                 background-position: 43px 7px;}
+      .search:hover { background-color: #e55;}
+      .add_search:hover { background-color: #39f;color: #fff;background-image:url(img/search1.png) ; }
+      .add_search{ margin-left:10px;color: #555;padding: 0px 10px 0px 20px;
+                   height: 30px;line-height: 30px; border-radius: 3px;
+                   font-size: 14px; cursor: pointer;  border: 1px solid #ccc;
+                   background:url(img/search2.png) no-repeat 10px 7px;
+       }
+       
+          
+/* 机票 */    
+      .plane_ticket{width:450px;height:225px;padding: 0 30px 0px 30px;
+                    font-size: 14px;color: #555;
+         }      
+      .plane_ch_two{ position: relative;left:-5px; }
+         
+      .ticket_back{margin-top: 20px;}
+      .tic_child_div{margin-bottom: 20px;}
+      .tic_child_div input[type='text']{
+          width: 160px;height:28px;text-indent:6px;
+          outline:0; border:1px #bbb solid;border-radius:4px;
+        }
+      .tic_child_div span{
+          display: inline-block; width: 50px; height:25px; white-space:nowrap;
+          text-indent: 0;  text-align: center;
+        }
+      .indent_go{text-indent: 31px;}
+      .go_back_icon{
+          background-image: url("img/go_back1.png");
+          background-repeat: no-repeat;
+          background-position: 12px 8px;
+         }
+      .go_back_icon:HOVER{
+          background-image: url("img/go_back2.png");
+          background-position: 12px 11px;
+        }
+      
+      /* 火车票 */
+       .train_ticket{ width: 440px;height:190px;padding: 40px 30px 70px 30px; font-size: 14px;}
+       .train_ticket a{ font-size: 10px;  color:#ccc;}
+       .train_ticket input[type='text']{
+          width: 158px;height:28px; text-indent:6px; outline:0;
+          border:1px #bbb solid;border-radius:4px;
+       }
+      .go_back_city span{display: inline-block;width: 50px;height:25px;white-space:nowrap;
+                         text-indent: 0;text-align: center;background-image: url("img/go_back1.png");
+                         background-repeat: no-repeat; background-position: 12px 8px;
+       }
+      .go_back_city span:HOVER{background-image: url("img/go_back2.png");background-position: 12px 11px;}
+      .train_child_div{margin-bottom: 20px}
+      .only_go{  display: inline-block;width: 25px;height:10px;white-space:nowrap;
+                 text-indent: 0; text-align: center;
+                  background: url("img/only_go.png") 5px 0px no-repeat;
+      }
+      /* 手机版 */
+       .left{display: inline-block;text-align: center;}
+      .phone_Edition { width: 455px;height:300px;margin:25px 0 0 25px;	 }
+/*---------选项卡结束-------------*/
+
+
+</style>
+<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+      var q=0;
+//---------------------轮播图-----------------------
+     $(".dots li").click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".lunbotu ul li").eq( $(this).index() ).show().siblings().hide();
+        q=$(this).index();
+      });
+ 
+      
+     //自动轮播实现
+
+      setInterval(function(){
+            if(q==8) { q=0; }   
+             $(".lunbotu ul li").eq(q).fadeIn(1000).siblings().fadeOut(1000);
+             $(".dots li").eq(q).addClass("active").siblings().removeClass("active");
+             q++
+           },3000);
+ 
+        
+//---------------------选项卡-----------------------        
+     //更改上面的文字   
+       $(".thisis_info .it_ul li").click(function(){
+           $(this).addClass("xuanxiang").siblings().removeClass("xuanxiang");
+           
+           $(".choose_self").eq( $(this).index()).show().siblings().hide();
+       
+       });
+     //更改显示文字
+       $(".hotel_span span").click(function(){
+           $(this).addClass("neiwai").siblings().removeClass("neiwai");
+           $(".add_search").toggle();
+           $(this).html();
+           if(  $(this).html()=="国内酒店"  ){
+            $(".country_hotel input").eq(0).val("北京");
+            $(".country_hotel input").eq(2).val("2017-08-31");
+            $(".country_hotel input").eq(3).val("如位置\酒店名\品牌");       
+           }else if( $(this).html()=="国际酒店" ){
+            $(".country_hotel input").eq(0).val("首尔");
+            $(".country_hotel input").eq(2).val("2017-09-03");
+            $(".country_hotel input").eq(3).val("商圈/地标/景点/酒店名"); 
+           }else if( $(this).html()=="国内机票" ){
+            $(".ticket_back input").eq(3).val("上海");
+            $(".ticket_back input").eq(4).val("2017-08-31");  
+           }else if( $(this).html()=="国际机票" ){
+            $(".ticket_back input").eq(3).val("香港");
+            $(".ticket_back input").eq(4).val("2017-09-03");
+           }
+       });
+       
+       $("input[name='oneorback']").click(function(){
+           if( $(this).index()==0 ){
+            $(".ticket_back input").eq(5).val("yyy-mm-dd");
+           }else{
+            $(".ticket_back input").eq(5).val("2017-09-05             周二");
+           }
+       
+       });
+
+      
+ 
+ 
+ });
+
+</script>
+
+
+
+  </head>
+  
+  <body>
+  
+<!------------- 轮播图和选项卡开始------------------>  
+	<div class="thisis_tab">
+	   <div class="lunbotu">
+	      <ul>
+	        <li style="display: block;"><i style="background-image: url('img/images149370993339413.jpg')"></i></li>
+	        <li><i style="background-image: url('img/images149371001863360.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images149371011284238.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150293611029343.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150296846462587.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150296872432368.jpg');"></i></li>
+	        <li><i style="background-image: url('img/images150337369110870.jpg');"></i></li>      
+	      </ul>
+	      <ol class="dots">
+	        <li class="dot active"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>
+	        <li class="dot"></li>	        	      
+	      </ol>
+	   </div>
+	   <div class="xuanxiangka" align="center">
+	        <div class="xuanxuangka_l" align="left">
+		         <div class="thisis_info">
+		              <ul class="it_ul">
+			                <li class="xuanxiang">
+			                  <span>
+			                     <i class="ei_icon icon01 icon11"></i>
+			                     <a href="#">酒店</a>
+			                  </span>
+			                </li>
+			                <li>
+			                   <span>
+			                     <i class="ei_icon icon02 icon12"></i>
+	                             <a href="#">机票</a>
+			                   </span>
+			                </li>
+			                <li>
+			                   <span>
+			                     <i class="ei_icon icon03 icon13"></i>
+			                     <a href="#">火车票</a>
+			                   </span>
+			                </li>
+			                <li style="border-bottom-color: #f3f3f3;">
+			                   <span>
+			                     <i class="ei_icon icon04 icon14"></i>
+			                     <a href="#">手机版</a>
+			                   </span>
+			                </li>
+			                <li class="emty"></li>
+		              </ul>
+		              
+		              <div class="cate">
+                               <!-- 酒店  -->
+                               <div class="hotel choose_self" align="center" style="display: block;">
+                                    <div class="hotel_span hotel_ch_two" align="left">
+                                         <span class="neiwai">国内酒店</span>
+                                         <span>国际酒店</span>
+                                    </div>
+                                    <div class="country_hotel" align="right">
+                                         <div class="main_input_text aim_address_change">目的地&nbsp;&nbsp; <input type="text" value="北京"></div>
+                                         <div class="main_input_text_2 time_change">入住&nbsp;&nbsp;<input type="text" value="2017-08-29">&nbsp;&nbsp;&nbsp;退房&nbsp;&nbsp;<input type="text" value="2017-08-30"></div>
+                                         <div class="main_input_text main_change">关键词&nbsp;&nbsp; <input type="text" value="如酒店\酒店名\品牌"></div></div>
+                                    <div align="left" style="width: 300px;">
+                                         <button class="search">&nbsp;&nbsp;搜索</button>
+                                         <button class="add_search">&nbsp;&nbsp;地图搜索</button>
+                                    </div>
+                              </div>		              
+                              <!-- 机票 -->
+                              <div class="plane_ticket choose_self" align="center">
+                                    <div class="hotel_span plane_ch_two" align="left">
+                                         <span class="neiwai">国内机票</span>
+                                         <span>国际机票</span>
+                                    </div>
+                                    <div class="ticket_back" align="left">
+                                          <div class="tic_child_div">航程类型&nbsp;&nbsp;<input type="radio" name="oneorback" checked="checked">&nbsp;单程&nbsp;&nbsp;&nbsp; <input type="radio" name="oneorback">&nbsp;往返</div>
+                                          <div class="tic_child_div back_city">往返城市&nbsp;&nbsp;<input type="text" value="北京"><span class="go_back_icon"></span><input type="text" value="上海"></div>
+                                          <div class="tic_child_div indent_go">去程&nbsp;<input type="text" value="2017-08-29"><span>返程</span><input type="text" value="yyyy-mm-dd"></div></div>
+                                    <div><button class="search">&nbsp;&nbsp;搜索</button></div>
+                              </div> 
+                              <!-- 火车票 -->
+                               <div class="train_ticket choose_self" align="left">
+                                   <div class="go_back_city train_child_div">往返城市 <input type="text" value="北京"><span> </span><input type="text" value="上海"></div>
+                                   <div class="train_child_div">出发日期 <input type="text" value="2017-08-31">&nbsp;<input type="checkbox"> <a>只看动车/高铁</a> &nbsp;<input type="checkbox"> <a>只看有票</a></div>
+                                   <div class="train_child_div" style="text-indent: 63px;"><button class="search"> 搜索</button></div>
+                                   <div>热门路线：北京<span class="only_go"></span>西安   上海<span class="only_go"></span>南京  深圳<span class="only_go"></span>厦门   广州<span class="only_go"></span>上海</div>
+                               </div>		              
+                               <!-- 手机版 --> 
+                               <div class="phone_Edition choose_self">
+                                    <img src="img/mobile_bg.png" />
+                               </div> 		              
+		              </div>  
+		         </div>	        
+	        </div>
+       </div>	    
+	</div>
+<!------------- 轮播图和选项卡结束------------------> 
+
+
+
+   
+<div>
+
+                            <div class="left">
+
+                              
+                               
+                               
+
+                            </div>
+                        </div>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>目的指数.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+   *{padding: 0; margin: 0; border: 0;}
+   body{font-size:12px;font-family:arial,Verdana, Geneva, Helvetica;color:#555;
+       line-height:20px;-webkit-text-size-adjust:none;
+   }
+   a { text-decoration: none; color: #37e; }
+   a:HOVER { text-decoration: none; color: #f55; }
+
+
+/*--------目的地指数开始------- */
+  /* 目的地指数顶部 */
+   .pp_top  { width: 1200px;height:33px;padding: 5px 0; border-bottom: 2px solid #f55; }
+   .pp_top a {     font: 24px/30px Microsoft yahei;color: #f55; margin-right: 10px;}
+   .pp_top span {     font: 14px/30px Microsoft yahei; color: #999; }
+  /* 目的地指数标题 */ 
+   .pp_title { width: 1200px;height:28px;padding: 10px 0; }
+   .pp_title a { width: 65px;height:26px; padding-right: 20px; }
+   .pp_title a div{ background: url(img/icon_index.png) no-repeat 0 0; width: 24px;height:24px;display: inline-block;}
+   .pp_title a div.guonei{ background-position: -576px -101px;}
+   .pp_title a div.haiwai{ background-position: -576px -131px;}
+   .pp_title a em  { display: inline-block; font: 18px/26px Microsoft yahei;color: #555; position: relative;top:-4px; }   
+   .pp_title span { display: inline-block; width: 56px;height:22px;padding: 1px 9px;
+                    border-radius:12px;cursor: pointer; margin: 4px 10px 0;  
+                    font: 14px/22px Microsoft yahei;border: 1px solid #fff;
+                    position:relative;top:-3px;
+      }
+   .hoveron1 { color: #F66; border: 1px solid #F66 !important; }
+   .on1 { background-color: #f66;color:#fff;border: 1px solid #F66 !important; } 
+   /* 目的地指数最右边的更多 */
+   .pp_title i { display: inline-block; float: right;}
+   .pp_title i a {  color: #555;font: 14px/24px Microsoft yahei;padding-right: 0px;position: relative;top:5px; }
+   .pp_title i a b {    font-family: Simsun;font-weight: normal;}
+   .pp_title i a:hover { color: #f55; }
+ /* 目的地指数下面图片 */  
+   .pp_bottom { overflow: hidden;width: 1200px;height: 202px; }
+   .pp_bottom ul { list-style: none; }
+   .pp_bottom ul li{ list-style: none;width: 293px;height:202px;margin-right: 9px;float: left;position: relative; }  
+   .pic_info { height: 160px;width: 100%;overflow: hidden; }
+   .pic_info img { display: block;width: 100%;margin-top: -20px;position: relative;bottom: 0;transition: bottom .3s }
+   .pp_bottom ul li:hover img { bottom:10px; } 
+   .pp_bottom ul li:hover .introduce { border-bottom: 2px solid #f55; }
+   .city_name {     position: absolute; font: 24px/30px Microsoft yahei; color: #fff;
+                    top: 124px; left: 0;text-indent: .5em;text-shadow: 1px 1px 7px #000;
+      }
+   .introduce { width: 283px;height:30px;padding: 5px;background-color:  #f7f7f7;border-bottom: 1px solid #ccc; }
+   .introduce p { color: #555;  font: 14px/30px Microsoft yahei ;text-align: left;}
+   .mt20 { margin-top: 20px; }
+   
+   
+/*--------目的地指数结束------- */     
+
+
+
+
+  
+</style>
+
+<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+   $(function(){
+    
+    
+    
+    
+//-----------------------目的指数的jquery方法--------------------
+       $(".pp_title span").click(function(){
+            $(this).addClass("on1").siblings().removeClass();
+       });
+       $(".pp_title span(:not([class='on1']))").hover(function(){
+            $(this).addClass("hoveron1").siblings().removeClass("hoveron1");
+       },function(){
+            $(".pp_title span(:not([class='on1']))").removeClass("hoveron1");
+       
+       });
+   
+
+   
+   
+   
+   
+   
+   });
+   
+
+</script>
+
+
+  </head>
+  
+  <body>
+<!-----------------------目的地指数开始  -------------------------------->  
+    <div class="purpose" align="center">
+    <!------目的地指数上面部分  ------>
+        <div class="pp_top" align="left">
+           <a>目的地指数 </a>
+           <span>覆盖全球75万家酒店，你想住的，我们都有</span>
+        </div>
+<!-- 国内 -->       
+<!------目的地指数标题部分  ------>    
+        <div class="pp_title" align="left">
+           <a href="#">
+             <div class="guonei"></div>
+             <em>国内</em>
+           </a>
+           <span class="on1">登高踏青</span>
+           <span>小憩温泉</span>
+           <span>天然氧吧</span>
+           <span>草原撒欢</span>
+           <span>小镇时光</span>
+           <span>美食之城</span>
+           <i>
+               <a href="http://hotel.elong.com/">更多<b>&gt;&gt;</b></a>
+           </i>
+        </div>
+   <!------目的地指数图片部分  ------>     
+        <div  class="pp_bottom">
+           <ul>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="黄山" src="img/dgtq-hs.jpg">
+		              </div>
+		              <div class="city_name">黄山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>春意撩人 登高踏青赏春色</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="峨眉山" src="img/dgtq-ems.jpg">
+		              </div>
+		              <div class="city_name">峨眉山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>阳春三月 闻着茶香去峨眉</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="五台山" src="img/dgtq-wts.jpg">
+		              </div>
+		              <div class="city_name">五台山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>迎春 祈福 登五台</p>
+	              </div>        
+              </li>
+              <li style="margin-right: 0px;">
+                  <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="庐山" src="img/dgtq-ls.jpg">
+		              </div>
+		              <div class="city_name">庐山</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>亲近自然 春游庐山</p>
+	              </div>             
+              </li>
+           </ul>     
+        </div>
+<!-- 海外 -->        
+<!------目的地指数图片部分  ------>    
+        <div class="pp_title mt20" align="left">
+           <a href="#">
+             <div class="haiwai"></div>
+             <em>海外</em>
+           </a>
+           
+           <span class="on1">文艺清新</span>
+           <span>面朝大海</span>
+           <span>别样建筑</span>
+           <span>浪漫主义</span>
+           <span>魅力都市</span>
+           <i>
+               <a href="http://hotel.elong.com/">更多<b>&gt;&gt;</b></a>
+           </i>
+        </div>
+   <!------目的地指数图片部分  ------>     
+        <div  class="pp_bottom">
+           <ul>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="伦敦" src="img/termini_it1_ld.jpg">
+		              </div>
+		              <div class="city_name">伦敦</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>风情英伦，帝国余韵</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="清迈" src="img/termini_it1_qm.jpg">
+		              </div>
+		              <div class="city_name">清迈</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>泰北玫瑰，慢行古城</p>
+	              </div>        
+              </li>
+              <li>
+	              <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="济州岛" src="img/termini_it1_jzd.jpg">
+		              </div>
+		              <div class="city_name">济州岛</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>最传统的浪漫，最神秘的自然</p>
+	              </div>        
+              </li>
+              <li style="margin-right: 0px;">
+                  <a href="#" target="_blank">
+		              <div class="pic_info">
+		                <img alt="罗马" src="img/termini_it1_lm.jpg">
+		              </div>
+		              <div class="city_name">罗马</div>
+	              </a> 
+	              <div class="introduce">
+	                  <p>永恒之城，魅力无限</p>
+	              </div>             
+              </li>
+           </ul>     
+        </div>
+    
+    </div>
+<!----------------------------目的地指数结束  --------------------------> 
+  </body>
+</html>

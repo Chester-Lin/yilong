@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>首页登录展示个性内容和详情切图.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+ *{padding: 0; margin: 0; border: 0;}
+  body{font-size:12px;font-family:arial,Verdana, Geneva, Helvetica;color:#555;
+       line-height:20px;-webkit-text-size-adjust:none;
+   }
+   a { text-decoration: none; color: #37e; }
+   a:HOVER { text-decoration: none; color: #f55; }
+
+
+
+
+
+
+/*-----------------详情开始-------------------------*/
+/* 登录展示个性内容 */
+   .mt20 { margin-top: 20px;}
+   .loginshow {    margin: 0 auto;min-width: 1200px;width: 1200px; }
+   .needlogin  { float: left; padding: 5px 20px;border-radius: 20px; background-color: #fff;border: 1px solid #ccc;font-size: 14px; }
+   .needlogin i { display: inline-block; width: 14px;height:14px; 
+                  background: url(img/icon_index.png) no-repeat -583px -16px;
+                  margin-right: 5px; position: relative;top: 3px;
+      }
+   .needlogin em { font-style: normal;font-weight: normal; }
+/* 详情切图 */
+   .p20clear  {clear: left; padding:20px 0 ;}  
+   .xiangqing { width: 1200px; } 
+   .xiangqing ul { width: 1200px;height: 260px;margin: 0 auto;overflow: hidden;}
+   .xiangqing ul li { float: left;height: 260px;width: 170; transition: width 1s;position: relative;cursor: pointer; }
+
+   .H_text  { overflow: hidden;width: 100%;height: 100%;background: rgba(0,0,0,.3);
+               position: absolute;top: 0;left: 0;
+    }
+   .H_text h4 { color: #fff;width: 30px;margin: 0 auto;display: block; font: 30px/30px Microsoft Yahei;padding-top: 30px;	 } 
+   .pic_auto {     width: 100%;height: 100%;   }
+   .pic_auto1 {background: url(img/20150422_ifold1.jpg) no-repeat center;}
+   .pic_auto2 {background: url(img/20150120_ifold2.jpg) no-repeat center;}
+   .pic_auto3 {background: url(img/20150120_ifold3.jpg) no-repeat center;}
+   .pic_auto4 {background: url(img/20150120_ifold4.jpg) no-repeat center;}
+   .pic_auto5 {background: url(img/20150120_ifold5.jpg) no-repeat center;}
+   .pic_auto6 {background: url(img/20150120_ifold6.jpg) no-repeat center;}
+   .pic_auto7 {background: url(img/20150120_ifold7.jpg) no-repeat center;}
+/*-----------------详情结束-------------------------*/
+
+
+
+   
+</style>
+<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+   
+   
+    $(function(){
+    
+//----------------------详情切图--------------------------------- 
+	     $(".xiangqing ul li").hover(function(){
+	        $(this).css("width","400px").siblings().css("width","133px");
+	        $(this).children("[class='H_text']").hide().siblings().show();
+	    },function(){
+	        $(".xiangqing ul li").css("width","170px");
+	        $(".xiangqing ul li").children("[class='H_text']").show();
+	    });
+	    
+	    
+	    
+	    
+    });
+
+</script>
+  </head>
+  
+  <body>
+<!---------------- 切图部分开始---------------->
+  <!-- 登录显示个性内容 -->
+		<div class="mt20" align="center">
+			<div class="loginshow" align="left">
+				<div class="needlogin">
+					<i class="aixin"></i>
+					<a href="https://secure.elong.com/passport/login_cn.html">登录</a>
+					<em>展示你的个性化内容</em>
+				</div>
+			</div>
+		</div>
+  <!-- 详情切图 -->
+        <div class="p20clear" align="center">
+           <div class="xiangqing">
+              <ul>
+                 <li>
+                       <div class="H_text">
+                           <h4>园林酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto1"></div>
+				 </li>
+				 
+                 <li>
+                       <div class="H_text">
+                           <h4>情侣酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto2"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>设计师酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto3"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>青年旅舍</h4>
+                       </div>
+					   <div class="pic_auto pic_auto4"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>特色客栈</h4>
+                       </div>
+					   <div class="pic_auto pic_auto5"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>海岛酒店</h4>
+                       </div>
+					   <div class="pic_auto pic_auto6"></div>
+				 </li>
+				 
+				 <li>
+                       <div class="H_text">
+                           <h4>海外温泉</h4>
+                       </div>
+					   <div class="pic_auto pic_auto7"></div>
+				 </li>
+			
+				 
+				 
+          
+              </ul>
+             
+             
+           
+           </div>        
+        </div>
+<!---------------- 切图部分结束---------------->
+  </body>
+</html>
