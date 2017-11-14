@@ -1,5 +1,5 @@
 @CHARSET "UTF-8";
-li{liststyle: none;}
+li{list-style: none;}
 /*---------轮播图开始-------------*/
    .thisis_tab { height:380px;width: 100%;position: relative; } 
    .lunbotu {overflow: hidden; width: 100%; height: 380px; }
